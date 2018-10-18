@@ -1,0 +1,12 @@
+// ====================================================================================
+//     EXTRA DEVICES 
+//     (>425px & <768px)
+// ====================================================================================
+
+@media only screen 
+    and (min-width: $device_size_mobile) 
+    and (max-width: $device_size_small)
+{
+        @include setHeaderMenuPadding(8px 13px);
+        @include setCenterHeader();
+}

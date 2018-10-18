@@ -1,0 +1,345 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face
+{
+	font-family: open-san;
+	src: url(../font/OpenSans-Regular.ttf);
+}
+body
+{
+	font-family: open-san;
+}
+/*-----------------------------------------------HEADER---------------------------------------*/
+*
+{
+	padding: 0;
+	margin: 0;
+}
+.bg_header
+{
+	height: 100px;
+	background-color: white;
+	text-align: center;
+	vertical-align: middle;
+}
+.bg_header ul
+{
+	list-style: none;
+}
+.bg_header ul li
+{
+	float: left;
+}
+.ul_header li a
+{
+	padding: 0 10px;
+	font-style: italic;
+	line-height: 100px;
+	font-size: 14px;
+	color: #3f3f3f;
+}
+.ul_header li a:hover,.ul_header li a:focus
+{
+	text-decoration: none;
+	color: crimson;
+}
+.hinh_header 
+{
+	text-align: center;
+}
+.logo 
+{
+	width: 95px;
+	height: 95px;
+	border: 1px solid #ff6c6f;
+	border-radius: 50%;
+	padding: 20px;
+	margin-left: 31px;
+	margin-top: 3px;
+}
+
+.glyphicon-minus
+{
+	font-weight: normal;
+}
+
+.ul_header_right ul 
+{
+	float: right !important;
+}
+.ul_header_right ul li a,.ul_header_right ul li img
+{
+	line-height: 100px;
+	padding: 25px;
+	font-size: 14px;
+	color: #3f3f3f;
+}
+.ul_header_right li a:hover,.ul_header_right li a:focus
+{
+	text-decoration: none;
+	color: crimson;
+}
+.glyphicon-chevron-left .left
+{
+	margin-top: -200px;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------SLIDER--------------------------------------*/
+.bg_slider .hinh_slider h2
+{
+	font-size: 45px;
+	font-weight: bold;
+	color: red;
+	z-index: 3 !important;
+}
+.bg_slider
+{
+	display: block;
+	z-index: 1 !important;
+	background: url(../images/slider.png);
+	max-width: 100%;
+	height: 575px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-right: 0;
+/*	-webkit-filter: grayscale(40%);  /*Safari   ---------  knew new --------*/
+    /*filter: grayscale(40%);*/
+}
+.mau
+{
+	width: 100%;
+	height: 575px;
+	background-color: rgba(13,17,21,0.20);
+	z-index: 2 !important;
+}
+.hinh_slider img
+{
+	margin-top: 30px;
+}
+/*-------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------TOP BLOGGER-------------------------------------*/
+.line h3
+{
+	color: #30373b;
+	font-size: 20px;
+	font-weight: bold;
+}
+.hinh_anh img
+{
+	width: 165px;
+	height: 160px;
+}
+.carousel-control
+{
+	background: none !important;
+}
+.nd
+{
+	padding: 0;
+	width: 1170px;
+}
+.hinh_anh
+{
+	margin-bottom: 80px;
+}
+.glyphicon-chevron-left
+{
+	color: #90a4ae;
+	margin-left: -95px !important;
+	margin-top: -75px !important;
+	font-size: 20px !important;
+}
+.glyphicon-chevron-right
+{
+	color: #90a4ae;
+	margin-right: -95px !important;
+	margin-top: -75px !important;
+	font-size: 20px !important;
+}
+.hinh_anh h2
+{
+	font-size: 18px;
+	color: #2a2a2a;
+}
+/*-------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------BG-NEEDKNOW-------------------------------------*/
+.bottom_line
+{
+	margin-bottom: 0 !important;
+}
+.bg_needknow
+{
+	background-color: #e5e5e5;
+	height: 795px;
+}
+.needknow
+{
+	height: 553px;
+	background-color: #ffffff;
+	position: relative;
+}
+h3,p,h4
+{
+	padding: 0;
+	margin: 0;
+}
+.needknow h3
+{
+	font-size: 24px;
+	color: #30373b;
+	padding: 50px 97px 0 25px;
+	text-decoration: underline #ff6c6f;
+	text-underline-position: under; /*------------- knew new --------*/
+}
+.needknow img
+{
+	z-index: 1;
+	height: 368px;
+}
+.arrow-up {
+	width:0px;
+	height:0px;
+	border-left:15px solid transparent;
+	border-right:15px solid transparent;
+	border-bottom:15px solid #ffffff; /* Tam giác phía trên được đổ màu */
+	z-index: 2;
+	position: absolute;
+	top: 354px;
+	left: 68px;
+}
+.needknow p
+{
+	font-size: 14px;
+	color: #30373b;
+	padding: 17px 58px 0 25px;
+}
+.needknow span
+{
+	font-size: 14px;
+	color: #30373b;
+	border-left: 1px solid #ff6c6f;
+	border-spacing: 10px;
+	padding: 0 10px 0 10px;
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+}
+.need_know
+{
+	width: 570px;
+	border-top: 1px solid #999898;
+	margin-left: -15px !important;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------BG-REVIEW-------------------------------------*/
+.review
+{
+	height: 600px;
+	background-color: #ffffff;
+	position: relative;
+}
+.review h4
+{
+	font-size: 12px;
+	color: #30373b;
+	text-transform: uppercase;
+	word-spacing: 7px;
+	padding: 28px 100px 0 43px;
+}
+.review h3
+{
+	font-size: 20px;
+	color: #30373b;
+	padding: 12px 24px 0 18px;
+	text-decoration: underline #ff6c6f;
+	text-underline-position: under; /*------------- knew new --------*/
+}
+.review p
+{
+	text-align: left;
+	font-size: 14px;
+	color: #30373b;
+	padding: 13px 35px 0 25px;
+	line-height: 26px;
+}
+.review span
+{
+	font-size: 14px;
+	color: #30373b;
+	border-spacing: 10px;
+	padding: 0 10px 0 10px;
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+	border-left: 1px solid #ff6c6f;
+}
+.review .arrow-up {
+	width:0;
+	height:0;
+	border-left:15px solid transparent;
+	border-right:15px solid transparent;
+	border-bottom:15px solid #ffffff; /* Tam giác phía trên được đổ màu */
+	z-index: 2;
+	position: absolute;
+	top: 345px;
+	left: 28px;
+}
+.bg_review .bottom_line
+{
+	width: 1280px !important;
+}
+.bg_xemthem
+{
+	height: 118px;
+	background-color: #edecec;
+}
+.bg_xemthem h3
+{
+	font-size: 14px;
+	font-weight: bold;
+	color: #30373b;
+	line-height: 118px;
+	word-spacing: 7px;
+}
+/*-------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------FOOTER------------------------------------*/
+.bg_footer
+{
+	height: 320px;
+	background-color: #e5e5e5;
+}
+.footer ul 
+{
+	margin-top: 50px;
+}
+.footer  
+{
+	margin-bottom: 26px;
+	border-bottom: 1px solid #d0d0d0;
+
+}
+.footer ul li
+{
+	float: left;
+	list-style: none;
+}
+.footer ul li a
+{
+	padding: 0 10px 0 80px;
+	margin-top: 50px;
+	font-size: 14px;
+	color: #010101;
+	line-height: 100px;
+}
+.footer ul li a:hover,.footer ul li a:focus
+{
+	text-decoration: none;
+}
+.tieu_de p
+{
+	font-size: 12px;
+	color: #000000;
+}
+/*-------------------------------------------------------------------------------------------*/

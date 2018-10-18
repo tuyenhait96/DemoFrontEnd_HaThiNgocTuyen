@@ -1,0 +1,162 @@
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+
+/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+
+table {
+	border-collapse:separate;
+	border-spacing:0;
+}
+
+
+/* HTML5 tags */
+header, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+
+/*===================*/
+/*=== Main Styles ===*/
+/*===================*/
+
+
+#dev7link {
+    position:absolute;
+    top:0;
+    left:50px;
+    background:url(images/dev7logo.png) no-repeat;
+    width:60px;
+    height:67px;
+    border:0;
+    display:block;
+    text-indent:-9999px;
+}
+
+.slider-wrapper { 
+	width: 100%; 
+	margin: 0 auto;
+}
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}
+
+.wrapper{	
+	width:100%;
+	margin:0 auto;
+	padding:0 1%;
+}
+.footer{
+	position:relative;
+	/*box-shadow: inset 0px 1px 8px #222;*/
+}
+
+.col_1_of_4{
+	display: block;
+	float:left;
+	/*border-right: 2px groove #555;*/
+}
+.col_1_of_4:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+.col_1_of_4:last-child {
+	border:none;
+}
+.span_1_of_4 {
+	width: 210px;
+	padding:10px 10px; 
+}
+.support_tt
+{
+	width: 280px;
+	padding:0px 10px; 
+
+}
+.support_tt h4 img
+{
+	padding: 0 5px;
+}
+.span_1_of_4  h4,.social-icons h4 {
+	color:#000000;
+	font-weight: bold;
+	margin-bottom: .5em;
+	font-size:16px;
+	line-height: 1.2;
+	font-weight : normal;
+	margin-top: 10px;
+	letter-spacing: -1px;
+	text-transform:uppercase;
+	border-bottom:1px solid #BDBDBD;
+	padding-bottom:0.5em;
+}
+.span_1_of_4  li a{
+	font-size:0.8125em;
+	padding:0.4em 0;
+	color:#3399d2;
+	display:block;	 	 
+}
+
+.span_1_of_4  li a:hover,.span_1_of_4  li span:hover{
+	color:#000000;
+	text-decoration: none;
+}
+.footer_pay
+{
+	font-size:0.8125em;
+	padding:0.5em 0;
+	color:#3399d2;
+	display:block;	 	 
+}
+/*** Social Icons ***/
+/*.social-icons{
+	padding-top:8%;
+}*/
+.social-icons li {
+	width:30px;
+	height:30px;
+	padding: 0px 0 0 5px;
+	margin: 0;
+    display:inline-block;
+	cursor:pointer;
+}
+.social-icons li.facebook {
+	background:url(../images/icon-2.png) no-repeat 0px  -29px;
+}
+.social-icons li.facebook:hover {
+	background:url(../images/icon-2.png) no-repeat 0px  0px;
+	/*transition: all 0.6s linear;*/
+}
+.social-icons li.twitter {
+	background:url(../images/icon-3.png) no-repeat 0px  -29px;
+}
+.social-icons li.twitter:hover {
+	background:url(../images/icon-3.png) no-repeat 0px  0px;
+}
+.social-icons li.googleplus {
+	background:url(../images/icon-4.png) no-repeat 0px  -29px;
+}

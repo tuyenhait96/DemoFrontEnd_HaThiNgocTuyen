@@ -1,0 +1,95 @@
+nav.header-menu{
+
+    // kế thừa
+    %menu-active-or-hover {
+        background-color: $header-color-button;
+        @include setBorderRadius(5px);
+        @include setBoxShadowBottom(-4px, $header-colorShadow-button);
+        transition: all 0.5s ease;
+    }
+
+    %sub-menu-active-or-hover {
+        background-color: #f0f0f0;
+        border-left: 3px solid #62A29E;
+        color: #797979;
+        transition: all 0.5s ease;
+    }
+    ul li{
+        list-style: none;
+        position: relative;
+        display: inline-block;
+        z-index: 999;
+        a{
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+    }
+
+    // Menu Level 01
+    ul.menu{
+        > li{
+            > a{
+                @include setFont(13px, $color-white, 600);
+                padding: 10px 24px;
+            }
+            &.activate{
+                > a{
+                    @extend %menu-active-or-hover;
+                }
+            }
+            &:hover{
+                > a{
+                    @extend %menu-active-or-hover;
+                }
+                ul.sub-menu{
+                    display: block;
+                }
+            }
+        // Menu Level 02
+            ul.sub-menu, ul.sub-sub-menu{
+                display: none;
+                position: absolute;
+                top: 29px;
+                left: 0px;
+                > li{
+                    width: 155px;
+                    > a{
+                        @include setFont(13px, $color-white);
+                        border-left: 3px solid #C03C35;
+                        border-bottom: 0.5px solid #f0f0f0;
+                        background-color: #E2534B;
+                        padding: 10px 20px; 
+                        display: block;
+                    }
+                    &:hover{
+                        > a{
+                            @extend %sub-menu-active-or-hover;
+                        }
+                        > ul.sub-sub-menu{
+                            display: block;
+                        }
+                    }
+                // Menu Level 03
+                    ul.sub-sub-menu{
+                        top: 0px;
+                        left: 155px; // set cho bằng width của li sub-menu
+                    }
+                }
+            }
+        }
+    }
+}
+
+a.mobile-menu{
+    display: none;
+    width: 100%;
+    padding: 12px;
+    background-color: #528B86;
+    @include setFont(16px, $color-white);
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: #447F7A;
+    }
+}

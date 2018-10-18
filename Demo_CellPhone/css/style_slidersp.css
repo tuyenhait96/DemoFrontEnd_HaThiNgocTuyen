@@ -1,0 +1,79 @@
+.slidersp
+{
+	width: 100%;
+	margin-bottom: 40px;
+}
+.owl-carousel .itemsp img
+{
+	width: 190px;
+	height: 190px;
+	margin-left: auto; 
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.owl-carousel .itemsp
+{
+	width: 227px;
+	text-align: center;
+}
+.owl-carousel
+{
+	background-color: #fff;
+}
+.owl-item:hover
+{
+	box-shadow: -1px 3px 20px #333;
+	transition: all 0.7s ease;
+}
+.slidersp h1
+{
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+.itemsp .fs-icpri
+{
+	color: red;
+	padding-bottom: 20px;
+
+}
+
+.itemsp .p-old-price
+{
+	color:#666; 
+	font-size: 13px;
+}
+.fs-icname
+{
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.slidersp:hover .owl-prev
+{
+	opacity: 1;
+}
+.slidersp:hover .owl-next
+{
+	opacity: 1;
+}
+.owl-next,.owl-prev
+{
+	
+	border-radius: 50%;
+	border: 1px solid #999;
+	height: 40px;
+	width: 40px;
+	font-size: 23px;
+	text-align: center;
+	line-height: 40px;
+	position: absolute;
+	top:50%;
+	color: #999;
+	opacity: 0;
+}
+
+.owl-next
+{
+	left: auto;
+	right: 0
+}

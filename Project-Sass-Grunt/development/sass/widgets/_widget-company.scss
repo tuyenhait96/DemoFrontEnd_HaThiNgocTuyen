@@ -1,0 +1,26 @@
+div.widget-list{
+    h4{
+        @include setFont(24px, #3C5A5A);
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+
+    ul{
+        padding-left: 0;
+        list-style: none;
+        li{
+            @include setTagAHover($color-white, #386238);
+
+            a{
+                @include setFont(14px, $color-white);
+
+                line-height: 1.8em;
+                &::before{
+                    content: url($url-images + 'right_arrow.png');
+                    vertical-align: baseline;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

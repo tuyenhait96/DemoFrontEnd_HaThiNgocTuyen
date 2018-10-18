@@ -1,0 +1,106 @@
+@import "include-meida";
+// Navigation Padding
+
+
+@mixin setHeaderMenuPadding($padding) {
+    header nav.header-menu ul.menu > li > a {
+        padding: $padding;
+        line-height: 35px; 
+        font-weight: bold;
+    }
+}
+
+// Set Center Header
+@mixin setCenterHeader() {
+    header{
+        nav.header-menu{
+            float: none !important;
+        }
+        text-align: center;
+        div.header-logo {
+            float: none !important;
+            margin-bottom: 15px;
+        }
+        nav header-menu  {
+            float: none !important; 
+        }
+    }
+}
+
+// Set Navigation On Mobile
+@mixin setNavigationOnMobile() {
+    // @include setCenterHeader();
+    header{
+        div.header-logo, nav.header-menu{
+            float: none !important;
+        }
+        nav.header-menu {
+            ul.menu {
+                display: none;
+                > li{
+                    display: block;
+
+                    > a{
+                        background-color: $color-white !important;
+                        color: #797979 !important;
+                        border-top: 1px solid #e0e0e0 !important; 
+                        display: block;
+                    }
+                    &:hover a, &.activate a {
+                        background-color:  #f0f0f0 !important;
+                        @include setBoxShadowBottom(0px, #47817E !important);
+                        @include setBorderRadius(0px !important);   
+                    }
+                    ul{
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+    a.mobile-menu {
+        display: block !important;
+        margin-top: 20px;
+    }
+}
+
+// Set BreadCrump Title Size
+@mixin setBreadCrumpMobile($size: 18px) {
+    section.section-breadcrumb{
+        h3.title{
+            font-size: $size !important;
+        }
+    }
+}
+
+//Set Article
+@mixin setArticle($distanceLine: 12px, $marginBottom: 30px, $marginRightTagA: 12px) {
+    div.article{
+        margin-bottom: $marginBottom !important;
+        &:last-child{
+            margin-bottom: $distanceLine;
+        }
+        // Định dạng cho tất cả các thành con đầu tiên trong acticle
+        > * {
+            margin-bottom: $distanceLine;
+        }
+        p.info{
+            a {
+                margin-right: $marginRightTagA;
+            }
+        }
+        a.view-more{
+            padding: 12px 20px !important;
+        }
+    
+    }
+}
+
+//Footer Top
+
+@mixin setFooterTop($marginBottom: 12px) {
+    .footer-column{
+        margin-bottom: $marginBottom;
+    }
+}

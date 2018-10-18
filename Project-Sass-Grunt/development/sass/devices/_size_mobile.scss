@@ -1,0 +1,13 @@
+// ====================================================================================
+//     MOBILE SIZE 
+//     Phones Less than 425px (<425px)
+// ====================================================================================
+
+@media only screen 
+    and (max-width: $device_size_mobile)
+{
+    @include setNavigationOnMobile();
+    @include setBreadCrumpMobile(18px);
+    @include setArticle(12px, 30px, 12px);
+    @include setFooterTop(12px);    
+}

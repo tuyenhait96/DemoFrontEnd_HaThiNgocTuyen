@@ -1,0 +1,39 @@
+div.widget-blog{
+    > h4 {
+        @include setFont(24px, $color-white);
+        font-style: italic;
+        margin-bottom: 20px;
+
+        span{
+            @include setFont(24px, $color-white);
+            padding-left: 10px;
+            font-style: normal;
+            text-transform: capitalize;
+        }
+    }
+
+    div.media{
+        a.pull-left{
+            margin-top: 5px;
+            width: 100px;
+            display: inline-block;
+            img.media-object{
+                width: 100%;
+            }
+        }
+        div.media-body{
+            padding-left: 8px;
+            h4.media-heading{
+                a{
+                    @include setFont(14px, $color-white);
+                    line-height: 1.5em;
+                }
+                @include setTagAHover($color-white, #386238);
+                margin-bottom: 10px;
+            }
+            span{
+                @include setFont(14px, #3C5A5A);
+            }
+        }        
+    }
+}

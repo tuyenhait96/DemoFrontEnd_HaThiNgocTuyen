@@ -1,0 +1,19 @@
+@import "widget-tags";
+@import "widget-ads";
+@import "widget-address";
+@import "widget-company";
+@import "widget-blog";
+
+div.widget {
+    h4{
+        @include setFont(20px, #7f8c8c, bold);
+        margin-bottom: 15px;
+    }
+    margin-bottom: $widget-margin-bottom;
+}
+
+footer div.footer-top{
+    background-color: #76c7c0;
+}
+
+

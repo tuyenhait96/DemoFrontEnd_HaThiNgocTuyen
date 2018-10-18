@@ -1,0 +1,13 @@
+header{
+    background-color: $header-color-background;
+    padding: 4% 0;
+    @import "_header-logo";
+    @import "_header-menu";
+}
+
+#main-content{
+    padding: 4% 0;
+}
+// .no-padding-left{
+//     padding-left: 0 ;
+// }

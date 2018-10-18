@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href="css/main.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <!-- HEADER: START -->
+        include "html-elements/header.html"
+        <!-- HEADER: END -->
+        
+        <!-- HEADER: START -->
+        include "html-elements/breadcrump.html"
+        <!-- HEADER: END -->
+
+        <!-- CONTENT: START -->
+        <div id="main-content">
+            <div class="container"> 
+                <div class="row">
+                    <!-- LEFT : START -->
+                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 no-padding-left">
+                        include "html-elements/article.html"
+                        include "html-elements/article.html"
+                        include "html-elements/article.html"
+                    </div>
+                    <!-- LEFT : END -->
+                    <!-- RIGHT : START -->
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                        <!-- Widget-Tags -->
+                        include "html-elements/widget-tags.html"
+
+                        <!-- Widget-Tags -->
+                        include "html-elements/widget-tags.html"
+                        
+                        <!-- Widget-Ags -->
+                        include "html-elements/widget-ads.html"
+                    </div>
+                    <!-- RIGHT : END  -->
+                </div>              
+            </div>
+        </div>
+        <!-- CONTENT: END -->
+        
+        <!-- FOOTER: START -->  
+        include "html-elements/footer.html"
+        <!-- FOOTER: END -->
+
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+</html>
