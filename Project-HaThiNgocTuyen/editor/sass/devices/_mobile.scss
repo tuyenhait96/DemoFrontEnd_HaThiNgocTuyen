@@ -1,0 +1,37 @@
+@media screen and (max-width: 768px){
+
+    #d-md-block{
+        display: block !important;
+    }    
+    .d-none-sm{
+        display: none !important;
+    }
+
+
+//--------------------- Index-01 --------------------- 
+//------------------- HEADER -------------------
+    @import "sp-header";
+
+//------------------- SECTION: BANNER -------------------
+    @import "sp-section-banner";
+
+//------------------- SECTION: CONTENT -------------------
+    @import "sp-section-content";
+
+//------------------- ARTICLE -------------------
+   @import "sp-article-construction";
+//------------------- ASIDE -------------------
+    @import "sp-aside";
+
+//------------------- FOOTER -------------------
+    @import "sp-footer";
+
+//--------------------- Index-02 --------------------- 
+//--------------------- SECTION: INFORM --------------------- 
+    @import "sp-section-inform";
+
+//--------------------- SECTION: TABLE --------------------- 
+    @import "sp-main-table";
+}
+
+

@@ -1,0 +1,51 @@
+#main-table{
+    background: $background-header;
+    height: auto;
+    .title{
+        @include setPaddingTB(63px, 47px);
+        text-align: center;
+        line-height: 1;
+        p{
+            @include setFont(26px, $color-bl);
+        }
+        .cover-img {
+            line-height: 0;
+            margin-top: 20px;
+        }
+
+    }
+
+    .cover-bottom{
+        text-align: center;
+        p{
+
+            @include setFont(16px, $color-grey);
+        }
+    }
+}
+
+td{
+    padding: 0;
+    margin: 0;
+}
+#table-cover{
+    margin: 48px auto 80px auto;
+}
+.table{
+    border-collapse: collapse;
+    th{
+        background-color: $color-blue;
+        @include setFont(16px, $color-white);
+        padding: 17px 0 !important;
+        font-weight: normal;
+    }
+    td, th{
+        border: 1px solid $footer-grey;
+        padding: 0;
+    }
+    td{
+        @include setFont(16px, $color-grey);
+        padding: 23px 23px 77px 17px;
+        vertical-align: baseline;
+    }
+}

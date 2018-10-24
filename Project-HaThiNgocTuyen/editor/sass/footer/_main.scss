@@ -1,0 +1,14 @@
+@import "footer";
+@import "footer-menu";
+
+footer{
+    background-color: $footer-grey;
+}
+.footer-copy {
+    background-color: $background-header;
+    margin: 20px auto;
+    text-align: center;
+    > span {
+        @include setFont (14px, $color-grey);
+    }
+}

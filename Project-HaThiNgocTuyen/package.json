@@ -1,0 +1,13 @@
+{
+    "name": "Project-HaThiNgocTuyen",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-contrib-connect": "^2.0.0",
+        "grunt-contrib-sass": "^1.0.0",
+        "grunt-contrib-uglify": "^4.0.0",
+        "grunt-contrib-watch": "^1.1.0",
+        "grunt-includes": "^1.1.0",
+        "install": "^0.12.1"
+    }
+}

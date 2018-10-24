@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Index_PC</title>
+</head>
+<body>
+    <div class="background-blue"></div>
+<!-- HEADER: START -->
+    <header id="header">
+        <!-- HEADER-LOGO -->
+        include "html-elements/header-logo.html"
+        <!-- HEADER-MENU -->
+        include "html-elements/header-menu.html"
+    </header>
+<!-- HEADER: END -->
+
+<!-- SECTION: START --> 
+    <main>
+        <!-- BANNER: START -->
+        include "html-elements/section-banner.html"
+        include "html-elements/section-content.html"
+    </main>
+    <!-- SECTION: END -->
+
+<!-- ARTICLE: START --> 
+    <article>
+        include "html-elements/article-construction.html"
+    </article>
+<!-- ARTICLE: END --> 
+
+<!-- ASIDE: START --> 
+    <aside id="aside-sp">
+        include "html-elements/aside.html"
+    </aside>
+<!-- ASIDE: END --> 
+
+<!--  FOOTER-TEXT: START --> 
+    <section id="section-footer">
+        include "html-elements/footer.html"
+    </section>
+<!-- FOOTER-TEXT: END --> 
+
+<!-- FOOTER-MENU: START --> 
+    <footer>
+    <!-- MENU: START -->
+        include "html-elements/footer-menu.html"
+    </footer>
+    <div class="footer-copy" id="footer-copy">
+        <span> &copy; IT NET</span>
+        
+    </div>
+<!-- FOOTER-MENU: END --> 
+
+<script>
+    $(document).ready(function(){
+        $('.menu').click(function(){
+            $('ul.header-menu').toggleClass('active');
+        })
+    });
+</script>
+<script src="js/back-to-top.js"></script>
+</body>
+</html>

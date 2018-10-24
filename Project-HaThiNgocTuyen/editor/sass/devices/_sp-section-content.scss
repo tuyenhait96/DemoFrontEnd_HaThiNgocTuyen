@@ -1,0 +1,41 @@
+//  ---- MAIN ----
+#content{
+    flex-direction: column;
+    margin: 25px 17.5px 30.5px 16.5px;
+    position: relative;
+    .content-left{
+        border-right: 0;
+        margin: 20px 17px 0 17px;
+        border-bottom: 2px dotted $footer-grey;
+    }
+    .content-right{
+        padding: 0 15.5px 70px 13.5px;
+        li{
+            border-bottom: 2px dotted $footer-grey;
+            font-size: 14px;
+            line-height: 22.4px;
+            padding: 10px 0 11px 4px;
+        }
+        a{
+            display: block;
+            font-size: 14px;
+            margin-bottom: 0;
+            border-bottom: 0;
+            text-decoration: underline;
+            text-underline-position: under;
+        }
+    }
+    .marign-15 {
+        margin: 7.5px 0 17px 0;
+    }
+    .button-content{
+        position: absolute;
+        bottom: 23px;
+        left: calc(50% - 55px);
+        padding: 9px 30px 9px 9px;
+        font-size: 13px;
+        .fa-play{
+            margin-right: 15px;
+        }
+    }
+}

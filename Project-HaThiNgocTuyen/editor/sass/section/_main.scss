@@ -1,0 +1,20 @@
+@import "section-banner";
+@import "section-content";
+@import "article-contruction";
+@import "aside";
+@import "section-inform";
+@import "article-main-menu";
+@import "main-table";
+
+article {
+    background-color: $background-grey;
+    height: auto;
+}
+
+
+.sp{
+    display: none;
+}
+.pc{
+    display: block;
+}

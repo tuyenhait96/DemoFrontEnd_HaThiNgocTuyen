@@ -1,0 +1,78 @@
+// ------------------- HEADER -------------------
+$background-blue: #0f5c9b;
+$background-header: #ffffff;
+$background-button: #ffed4d;
+$background-grey: #eeeeee;
+$color-button: #fd7e00;
+$footer-grey: #cccccc;
+
+$color-grey: #555555;
+$color-white: #ffffff;
+$color-yellow: #ffff4c;
+$color-bl: #111111;
+$color-black: #000000;
+$color-border: #dddddd;
+$color-blue: #0e5b9a;
+$color-blue-table:#0c5999;
+
+// ------------------- MIXINS: SET-FONT -------------------
+@mixin setFont($fontSize, $color) {
+    font-size: $fontSize;
+    color: $color;
+    
+}
+
+// ------------------- MIXINS: PADDING -------------------
+@mixin setPaddingTB($paddingTop, $paddingBottom) {
+    padding-top: $paddingTop;
+    padding-bottom: $paddingBottom;
+}
+// ------------------- MIXINS: PADDING -------------------
+@mixin setPaddingLR($paddingLeft, $paddingRight) {
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+}
+// ------------------- MIXINS: BUTTON   -------------------
+@mixin setButton($padding, $backgroundColor,$fontWeight, $textDecoration) {
+    padding: $padding;
+    background-color: $backgroundColor;
+    font-weight: $fontWeight;
+    text-decoration: $textDecoration;
+}
+
+// ------------------- EXTEND: IMAGE -------------------
+%hover{ 
+    li{
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+%block {
+    img{
+        display: block;
+    }
+}
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+%border-white{
+    color: $color-white;
+    border: 1px solid $color-white;
+}
+
+%border-blue{
+    color: $background-blue;
+    border: 1px solid $background-blue;
+}

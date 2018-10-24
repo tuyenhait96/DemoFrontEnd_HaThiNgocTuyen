@@ -1,0 +1,48 @@
+// ------------------------------ VARIABLE -----------------------------------
+@import "variable";
+// ------------------------------ DEVICE -----------------------------------
+@import "devices/mobile";
+// ------------------------------ HEADER -----------------------------------
+@import "header/main";
+// ------------------------------ SECTION -----------------------------------
+@import "section/main";
+// ------------------------------ FOOTER -----------------------------------
+@import "footer/main";
+
+body {
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-weight: 500;
+}
+*, p, ul, a, img {
+    margin: 0;
+    padding: 0;
+}
+
+.container{ 
+    width: 950px;
+    height: auto;
+    margin: 0 auto;
+}
+
+ul,ol{
+    li {
+        list-style: none;
+        a {
+            text-decoration: none;
+        }
+
+    }
+}
+
+img{
+    max-width: 100%;
+}
+.d-none{
+    display: none !important;
+}
+.d-block{
+    display: block !important;
+}
+.mg-auto{
+    margin: 0 auto;
+}

@@ -1,0 +1,24 @@
+//  ---- SECTION: BANNER ----
+#image-banner 
+{
+    background: url("../images/banner-section-sp.png") no-repeat center bottom;
+    background-size: cover;
+    padding: 56px 25px 78px 25px;
+    height: 210px;;
+    .text-banner {
+        font-size: 19px;
+        padding: 15px 30.5px;
+        text-align: center;
+    }
+}
+
+// ------------------------- Index -02 -------------------------
+#main-banner #image-banner{
+    background: url("../images/main-banner-sp.png") no-repeat center;
+    background-size: cover;
+    padding: 0;
+    .text-banner{
+        font-size: 18px;
+        padding: 45px 50px 44px 53.5px;
+    }
+}

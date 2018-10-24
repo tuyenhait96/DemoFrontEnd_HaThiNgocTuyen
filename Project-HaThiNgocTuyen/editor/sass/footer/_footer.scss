@@ -1,0 +1,72 @@
+section{
+    background: url("../images/banner-footer.png") no-repeat center;
+    height: 358px;
+}
+
+.footer{
+    @extend %flex-center;
+    flex-direction: column;
+    position: relative;
+    > img {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        cursor: pointer;
+    }
+    .text-footer {
+        font-size: 24px;
+        padding: 17px 60px;
+        @extend %border-white;
+        margin-top: 60px;
+        font-weight: bold;
+    }
+    .text-white {
+        text-align: center;
+        @include setFont(16px, $color-white);
+        line-height: 22.4px;
+        margin-top: 30px;
+    }
+    > strong {
+        @include setFont(16px, $color-yellow);
+        line-height: 22.4px;
+        margin-bottom: 40px;
+    }
+    >.header-right {
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        .text-phone {
+            @include setFont(12px, $color-white);
+        }
+        a:hover{
+            transition: all 0.3s ease;
+            background-color: #ecd71e;
+        }
+    }
+    
+}
+
+.cover-phone {
+    height: 32px;
+}
+
+// ------------------------- Index -02 -------------------------
+
+#bg-content{
+    background: $background-header;
+    height: 300px;
+    .text-footer{
+        font-size: 24px;
+        font-weight: bold;
+        padding: 18px 36px;
+        @extend %border-blue;
+        margin-top: 63px;
+    }
+    .text-white{
+        margin-top: 47px;
+        @include setFont(22px, $background-blue);
+        span{
+            @include setFont(16px, $color-grey);
+        }
+    }
+}

@@ -1,0 +1,46 @@
+#header {
+    padding-right: 9.5px;
+    div.header-left{
+        padding-left: 19.5px;
+    }
+    div.header-right {
+        display: none;
+    }
+    .toggle{
+        display: block;
+        padding-right: 0;
+    }
+}
+
+#header ul.header-menu {
+    flex-direction: column;
+    display: none;       
+    position: absolute;
+    background-color: $background-header;
+    li{
+        margin-bottom: 5px;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+        &:last-child{
+            margin-top: 10px;
+        }
+    }    
+    li:hover{
+        background-color: #ffed4d;
+        transition:all 0.2s ease-in;
+    }
+}
+.container{
+    width: 100% !important ;
+}
+//  ---- HEADER ----
+.active {
+    display: block !important;
+}
+.header img{
+    max-width: 100%;
+    width: 50%;
+}
+

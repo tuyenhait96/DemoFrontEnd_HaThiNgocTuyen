@@ -1,0 +1,32 @@
+#aside-sp{
+    .d-flex{
+        padding-top: 0;
+    }
+    .aside-left {
+        margin-right: 38px;
+    }
+}
+.d-flex{
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+
+    #aside-right{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 31px 17px 0 17px;
+        margin-top: 0;
+
+        .aside-img{
+            //@include setPaddingTB(31px, 22.5px);
+            padding-bottom: 0;
+        }
+        >span{
+            font-size: 14px;
+        }
+        > p {
+            @include setPaddingTB(21.5px, 25px);
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+#section-inform{
+    background: $background-grey;
+    height: auto;
+    padding-bottom: 90px;
+    .title{
+        @include setPaddingTB(68px, 44px);
+        line-height: 1;
+        text-align: center;
+        p{
+            @include setFont(26px, $color-bl);
+        }
+        .cover-img{
+            line-height: 0;
+            margin-top: 20px;
+        }
+    }
+
+    .inform-item{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        padding: 25px;
+        background-color: $background-header;
+
+        .item-left{
+            flex-grow: 7;
+        }
+
+        .item-right{
+            // flex-grow: 3;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.item-top{
+    display: flex;
+    align-items: center;
+    span{
+        @include setFont(24px, $color-blue);
+        font-weight: bold;
+        margin-left: 12px;
+        width: 358px;
+    }
+}
+
+.item-center{
+    width: 367px;
+    padding: 21px 0 28px 4px;
+    line-height: 1.5;
+    p.text-bl,span,p{
+        @include setFont(16px, $color-bl);
+        font-style: normal;
+    }
+
+    h4, a{
+
+        @include setFont(16px, $color-blue);
+        font-weight: bold;
+        text-decoration: none;
+    }
+    p{
+        display: inline-block;
+    }
+}
+
+.item-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    .group-phone-2{
+        @extend %border-blue;
+        text-align: center;
+        padding: 8px 34px 5px 34px;
+        margin-right: 14px;
+        line-height: 1;
+        .text-phone{
+            @include setFont(10px, $color-blue);
+        }
+    }
+    .button-yellow-header{
+        padding: 17px 22px;
+        font-size: 16px;
+        margin-right: 24px;
+
+        &:hover{
+            transition: all 0.3s ease;
+            background-color: #ecd71e;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+article{
+    padding: 0 20.5px;
+}
+ul#article-content-sp {
+    @include setPaddingTB(20.5px, 24.5px);
+    > li{
+        font-size: 14px;
+    }
+}
+#header-article-sp > img
+{
+    &:first-child{
+        @include setPaddingTB(30px, 7px);
+    }
+    &:nth-child(3) {
+        @include setPaddingTB(31.5px, 8.5px);
+    }
+}
+
+#article-home-sp {
+        padding-bottom: 30px;
+        li{
+            &:nth-child(1){
+                padding-left: 15px;
+            }
+            &:nth-child(3){
+                padding-right: 15px;
+            }
+            &:nth-child(2){
+                @include setPaddingLR(10px,10px);
+            }
+            .button-article{
+                display: none;
+            }
+            a:hover{
+                opacity: 0.9;
+                transition: all 0.3 ease;
+            }
+        }
+}
+
+.ps-center{
+    img:last-child{
+        width: 50%;
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 25%);
+    }
+}

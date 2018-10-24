@@ -1,0 +1,27 @@
+.d-flex {
+    display: flex;
+    padding-top: 50px;
+    .aside-left {
+        margin-right: 56px;
+        line-height: 0;
+    }
+    .aside-right{
+        @extend %block;
+        margin-top: 35px;
+        > .aside-img {
+            padding-bottom: 28px;
+        }
+        > p {
+            @include setFont(16px, $color-grey);
+            line-height: 1.5;
+            padding-bottom: 26px;
+        }
+        a:hover{ 
+            img{
+                opacity: 0.9;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+

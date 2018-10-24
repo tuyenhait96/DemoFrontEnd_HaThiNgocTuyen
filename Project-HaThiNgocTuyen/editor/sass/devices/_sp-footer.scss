@@ -1,0 +1,77 @@
+#section-footer{
+    background: url("../images/banner-footer-sp.png") no-repeat right;
+    background-size: cover;
+}
+#footer > img {
+    display: none !important ;
+}
+
+#footer{
+    .text-footer{
+        font-size: 16px;
+        padding: 9px 24px;
+        margin-top: 35px;
+    }
+    .text-white {
+        font-size: 14px;
+        margin-top: 20px;
+        padding: 0 24.5px;
+    }
+
+    > span{
+        margin: 21px 27px 0 28.5px;
+    }
+
+    >strong{
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    img {
+        max-width: 50% ;
+    }
+    .header-right{
+        flex-direction: column;
+        .group-phone{
+            text-align: center;
+            .text-phone{
+                font-size: 10px;
+            }
+        }
+
+        .button-yellow-footer{
+            margin: 20px 35px 0 35px;
+            text-align: center;
+            .text-button{
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+#footer-copy{
+    margin: 17.5px auto;
+    > span{
+        font-size: 10px;
+    }
+}
+
+// ------------------------------- Index-02 -------------------------------
+
+section#bg-content{
+    padding: 25px 15px;
+    height: auto;
+    #text-footer{
+        font-size: 16px;
+        padding: 9px 21.5px;
+        margin-top: 0;
+    }
+
+    #text-white{
+        margin-top: 18px;
+        font-size: 19px;
+        span{
+            font-size: 14px;
+        }
+    }
+}

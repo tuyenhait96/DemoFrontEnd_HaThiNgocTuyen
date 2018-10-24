@@ -1,0 +1,25 @@
+main{
+    .image-banner{
+        @extend %flex-center;
+    }    
+}
+.image-banner{
+    background: url("../images/banner-section.png") no-repeat center;
+    height: 420px;
+    .text-banner {
+        font-size: 30px;
+        padding: 17px 15px;
+        @extend %border-white;
+    }
+}
+// ------------------------- Index -02 -------------------------
+#main-banner{
+    .image-banner{
+        background: url("../images/main-banner.png") no-repeat center;
+        height: 160px;
+        .text-banner {
+            font-size: 28px;
+            border: 0;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.header-article{
+    >img {
+        display: block;
+        margin: 0 auto;
+        &:first-child{
+            @include setPaddingTB(60px, 18px);
+        }
+    }
+}
+
+ul.article-content{
+    text-align: center;
+    @include setPaddingTB(40px, 65px);
+    >li{
+        line-height: 22.4px;
+        @include setFont(16px, $color-grey);
+    }
+}
+
+.article-home {
+    display: flex;
+    padding-bottom: 75px;
+    li{
+        &:nth-child(1){
+            padding-left: 36px;
+        }
+        &:nth-child(3){
+            padding-right: 36px;
+        }
+        &:nth-child(2){
+            @include setPaddingLR(110px,110px);
+        }
+        a:hover{
+            background-color: rgba($color: #02335a, $alpha: 1.0);
+            transition: all 0.3s ease;
+        }
+    }
+
+}
+.ps-center{
+    position: relative;
+}
+.button-article{
+    padding: 9px 23px 8px 10px;
+    background-color: $background-blue;
+    @include setFont(10px, $color-white);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 40px;
+    left: calc(50% - 40px);
+    .fa-play {
+        padding-right: 13px;
+        font-size: 6px;
+        vertical-align: middle;
+    }
+
+}

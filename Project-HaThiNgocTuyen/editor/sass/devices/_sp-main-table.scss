@@ -1,0 +1,41 @@
+.main-menu{
+    display: none;
+}
+
+#main-table{
+    padding: 0 15px 0 15px;
+    #cover-bottom >p{
+        font-size: 14px;
+    }
+
+    #title{
+        @include setPaddingTB(28.6px , 21.5px);
+        p{
+            font-size: 18px;
+        }
+        #cover-img{
+            margin-top: 13px;
+            img{
+                margin: 0 auto;
+            }
+        }
+    }
+}
+table, tr, td, th,tbody{
+    width: 100%;
+    display: block;    
+    text-align: justify;
+    box-sizing: border-box;
+}   
+#table-cover{
+    margin: 21px 0 37px 0 !important;
+    th{
+        font-size: 14px;
+        text-align: center;
+        padding: 14px 0 12px 0 !important;
+    }
+    td{
+        padding: 14px 21px 13.5px 17.5px;
+        font-size: 14px;
+    }
+}

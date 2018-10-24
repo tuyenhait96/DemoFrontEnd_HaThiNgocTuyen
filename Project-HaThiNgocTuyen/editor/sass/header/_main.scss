@@ -1,0 +1,15 @@
+@import "header-logo";
+@import "header-menu";
+
+.background-blue{
+    height: 4px;
+    background-color: $background-blue;
+}
+
+header{
+    padding-top: 18px;
+}
+
+#header{
+    padding-top: 10px;
+}

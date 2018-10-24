@@ -1,0 +1,27 @@
+.padding-42{
+    @include setPaddingTB(42px, 42px);
+    @media(max-width: 768px) {
+        padding: 21px 31.5px 20px 34.5px
+    }
+}
+.footer-menu {
+    @extend %flex-center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    li a {
+        @include setFont(12px, $color-grey);
+        @include setPaddingLR(22px,22px);
+        border-left: 1px solid $color-grey;
+        line-height: 23.8px;
+        &:hover{
+            color: $color-blue;
+        }
+        @media(max-width: 768px) {
+            font-size: 10px;
+            @include setPaddingLR(14px,14px);
+        }
+    }
+    .border-right {
+        border-right: 1px solid $color-grey;
+    }
+}

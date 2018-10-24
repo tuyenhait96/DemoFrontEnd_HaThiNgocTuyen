@@ -1,0 +1,47 @@
+// ------ HEADER-MENU: START ------ 
+div.header {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    div.header-left {
+        line-height: 0;
+    }
+    div.header-right {
+        padding-top: 4px;
+        display: flex;
+        align-items: center;
+        line-height: 0;
+        a:hover{
+            transition: all 0.3s ease;
+            background-color: #ecd71e;
+        }
+    } 
+    
+}
+div.group-phone{
+    padding-right: 22px;
+    line-height: 1;          
+    span.text-phone{
+        @include setFont(10px, $color-black);
+    }
+}
+a.button-yellow-header{
+    @include setButton(15px 20px 15px 18px, $background-button, bold, none);
+    @include setFont(14px, $color-button);
+}
+
+a.button-yellow-footer{
+    @include setButton(17px 21px, $background-button, bold, none);
+    line-height: 0;
+    @include setFont(16px, $color-button);
+}
+
+.toggle {
+    padding-right: 15px;
+    display: none;
+    cursor: pointer;
+    text-align: right;
+
+}
+
+// ------ HEADER-MENU: START ------ 
