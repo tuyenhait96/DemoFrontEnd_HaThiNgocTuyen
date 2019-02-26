@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Area | Create Page</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Create <small>User</small></h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Website Overview -->
+        <div class="panel-body">
+          <div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="#" id="txtId" disabled>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Full Name" id="txtFullName" required>
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control" placeholder="Date of Birth" id="txtDate" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Hometown" id="txtHome">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" id="txtEmail" required>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" placeholder="Phone" id="txtPhone" pattern="^\d{10}$">
+            </div>
+            <div class="text-center">
+              <input type="submit" class="btn btn-info" value="Add" id="btnCreate">
+              <a href="" class="btn btn-dark" id="back">Back</a>
+            </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/process/process.js"></script>
+<script src="js/url.js"></script>
+<script src="js/moment.min.js"></script>
+<script>
+
+  const btnCreate = document.getElementById("btnCreate");
+  let arrUser = process.getData();
+
+  arrUser = arrUser || [] 
+  // if (arrUser === null || arrUser === undefined) {
+  //   arrUser = [];
+  // } else {
+  //   arrUser = arrUser;
+  // }
+
+ if (arrUser.length === 0) {
+    document.getElementById("txtId").value = 1;
+  } else {
+    setIdIncrease()
+  }
+
+  function setIdIncrease() {
+    let newB = []
+    arrUser.forEach(item => {
+      console.log('s', item.id)
+      newB.push(item.id)
+      console.log(newB)
+    })
+    console.log('b', newB)
+    document.getElementById("txtId").value =  Math.max.apply(Math,newB) + 1
+  }
+  
+  // function setRandomId() {
+  //   document.getElementById("txtId").value = process.guidGenerator()
+  // }
+  // setRandomId() 
+
+  btnCreate.onclick = function () {
+    let txtId = document.getElementById("txtId").value;
+    let txtFullName = document.getElementById("txtFullName").value;
+
+    let txtDate = document.getElementById("txtDate").value; //YYYY-MM-DD
+    console.log(txtDate);
+
+    let formatDate = moment(txtDate).format("DD-MM-YYYY");
+    let txtHome = document.getElementById("txtHome").value;
+    let txtEmail = document.getElementById("txtEmail").value;
+    let txtPhone = document.getElementById("txtPhone").value;
+    const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    const phone = /^\d{10}$/;
+
+    if (txtFullName == "") {
+      alert('Name is require at least 1 character')
+      document.getElementById("txtFullName").focus()
+      return false
+    } else if (!isNaN(txtFullName)) {
+      alert('Please provide a vaild name!')
+      document.getElementById("txtFullName").focus()
+      return false
+    }
+
+    if (!Date.parse(txtDate)) {
+      alert("Please provide a valid date like DD-MM-YYYY")
+      document.getElementById("txtDate").focus()
+      return false
+    }
+
+    if (!filter.test(txtEmail)) {
+      alert('Please provide a valid email address');
+      document.getElementById("txtEmail").focus()
+      return false
+    }
+
+    if (!txtPhone.match(phone)) {
+      alert("Please provide digits 0-9")
+      document.getElementById("txtPhone").focus()
+      return false
+    }
+
+
+    arrUser.push({ id: txtId, name: txtFullName, birth: formatDate, home: txtHome, email: txtEmail, phone: txtPhone })
+    localStorage.setItem('arrUser', JSON.stringify(arrUser))
+    alert('Create user success')
+    txtId = ''
+    txtFullName = ''
+    txtDate = ''
+    //setRandomId()
+    setIdIncrease()
+  }
+  const btnBack = document.getElementById("back")
+  const slas = URL.pathName.split('/')
+  slas.pop()
+  const newA = slas.join('/')
+  btnBack.setAttribute("href", `${newA}/`)
+</script>
+</body>
+
+</html>

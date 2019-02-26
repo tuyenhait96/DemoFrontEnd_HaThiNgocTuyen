@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="width d-flex">
+        <h3>Detail</h3>
+        <div class="cover border-t">
+            <strong>Name: </strong>
+            <div id="name"></div>
+        </div>
+
+        <div class="cover">
+            <strong>Birthday: </strong>
+            <div id="birth"></div>
+        </div>
+
+        <div class="cover">
+            <strong>Hometown: </strong>
+            <div id="home"></div>
+        </div>
+
+        <div class="cover">
+            <strong>Email: </strong>
+            <div id="email"></div>
+        </div>
+
+        <div class="cover border-b">
+            <strong>Phone: </strong>
+            <div id="phone"></div>
+        </div>
+
+        <div class="cover-b mt-4">
+            <a class="btn btn-warning ml-5" id="btnEdit" href= "">
+                Edit
+            </a>
+            <a class="btn btn-dark" href="" id="back">
+                Back
+            </a>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/process/process.js"></script>
+<script src="js/render/render.js"></script>
+<script src="js/url.js"></script>
+<script>    
+
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const param = urlParams.get('id');
+    const currentUser = process.getDetail(param);
+    document.getElementById('name').innerHTML = `${currentUser['name']}`;
+    document.getElementById('birth').innerHTML = `${currentUser['birth']}`
+    document.getElementById('home').innerHTML = `${currentUser['home']}`
+    document.getElementById('email').innerHTML = `${currentUser['email']}`
+    document.getElementById('phone').innerHTML = `${currentUser['phone']}`
+
+    const id = new URLSearchParams(window.location.search).get('id');
+    const currentUsers = process.getDetail(id);
+    document.getElementById('name').innerHTML = `${currentUsers['name']}`;
+    document.getElementById('birth').innerHTML = `${currentUsers['birth']}`
+    document.getElementById('home').innerHTML = `${currentUsers['home']}`
+    document.getElementById('email').innerHTML = `${currentUsers['email']}`
+    document.getElementById('phone').innerHTML = `${currentUsers['phone']}`
+
+    const btnEdit = document.getElementById("btnEdit");
+    const slashes = URL.pathName.split('/'); //[desktop, blabla, detail]
+    slashes.pop();
+    slashes.push('edit');
+    const newPath = slashes.join('/');
+
+    btnEdit.setAttribute('href', `${newPath}?id=${id}`);
+
+    const btnBack = document.getElementById("back");
+
+    const slas = URL.pathName.split('/')
+    slas.pop()
+    const newA = slas.join('/')
+    btnBack.setAttribute("href", `${newA}/`)
+</script>
+
+</html>

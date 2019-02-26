@@ -1,0 +1,35 @@
+.title, .table {
+  display: none;
+}
+.cover {
+  display: flex;
+  width: 310px;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 6px;
+}
+.width {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.width div:nth-child(odd){
+  background-color: rgba(23, 162, 184, 0.5)
+}
+.width div:nth-child(even){
+  background-color: rgba(23, 162, 184, 0.1)
+}
+
+.width .border-t {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.width .border-b {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.width div:last-child {
+  background: none;
+}

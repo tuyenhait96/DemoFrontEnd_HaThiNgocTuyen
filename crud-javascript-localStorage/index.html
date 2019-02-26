@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section id="main">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading main-color-bg">
+                            <h3 class="panel-title">
+                                List of users
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <h1 id="title">
+                                No users in list
+                            </h1>
+                            <a href="create.html" class="btn btn-info mt-3 mb-5">
+                                Add user
+                            </a>
+                            <table class="table" id="table">
+                                <thead>
+                                    <tr class="text-primary">
+                                        <th class="text-center">
+                                            #
+                                        </th>
+                                        <th class="text-center">
+                                            Full name
+                                        </th>
+                                        <th class="text-center">
+                                            Birthday
+                                        </th>
+                                        <th class="text-center"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="list"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="./js/process/process.js"></script>
+<script src="js/render/render.js"></script>
+<script src="js/url.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('title').style.display = process.getData() ? 'none' : 'block';
+        document.getElementById('table').style.display = process.getData() ? 'block' : 'none';
+        const list = document.getElementById('list')
+
+        if (process.getData()) {
+            const data = process.getData();
+            render.showListOfUsers(data, list);
+        }
+    })
+    
+    function deleteUser(e) {
+        const rs = confirm('Do you want delete user?')
+        if (rs) {
+            debugger
+            const id = e.getAttribute('idUser')
+            debugger
+            const data = process.getData()
+            debugger
+            render.handleClickDelete(id, data, function (data) {
+                debugger
+                process.setListUser(data)
+                debugger
+                render.handleClearList(list)
+                debugger
+                render.showListOfUsers(data, list)
+            })
+        }
+    }
+</script>
+
+</html>
